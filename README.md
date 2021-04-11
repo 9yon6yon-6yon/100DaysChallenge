@@ -10,5 +10,6 @@
 </div>
 <hr>
 
+[![wakatime status](https://wakatime.com/badge/github/9yon6yon-6yon/100DaysChallenge.svg)](https://wakatime.com/badge/github/9yon6yon-6yon/100DaysChallenge)
 
 >Use codes/files you want
