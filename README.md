@@ -1,7 +1,5 @@
 ![](https://media.tenor.com/images/debc55820e6840c6267bbb43c72a3def/tenor.gif)
 # 100DaysCodeChallenge
-
-
 #### I am trying to code daily and upload them here.
 #### I will upload files of languases  that I am learning and trying to code successfully.
 <hr>
