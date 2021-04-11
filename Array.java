@@ -15,7 +15,7 @@ public class Array {
             System.out.print(arr2[j]+" ");//print uses no new line by default
         }
         System.out.println("\n");
-        
+        //array
     }
 
 }
