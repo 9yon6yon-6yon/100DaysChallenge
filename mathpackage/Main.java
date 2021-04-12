@@ -1,6 +1,6 @@
 package mathpackage;
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
        System.out.println("Maximum value of 1 and 10 is = "+Math.max(1, 10));
        System.out.println("Minimum Value of 1 and 10 is = " +Math.min(1, 10));
