@@ -2,7 +2,6 @@
 
 int main()
 {
-
     FILE *file = fopen("FirstFile.txt", "r");
     if (file == NULL)
     {
@@ -14,9 +13,6 @@ int main()
         else
             printf("2.Error Opening File\n");
     }
-  
-
     fclose(file);
-
     return 0;
 }
