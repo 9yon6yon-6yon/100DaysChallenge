@@ -16,5 +16,4 @@ public class Pyramid {
             System.out.println();//prints new line after a line is done or 1 loop is completed
         }
     }
-
 }
