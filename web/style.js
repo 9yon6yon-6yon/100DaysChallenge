@@ -10,3 +10,5 @@ var name="Chayon";
 var text="My name is Chayon";
 var sayhello='\n Hello world! \' I am a JavaScript programmer. \' ';
 document.write(sayhello);
+var isActive = true;
+var isHoliday = false;
