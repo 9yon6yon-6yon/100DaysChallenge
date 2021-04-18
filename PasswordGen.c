@@ -11,10 +11,10 @@ int main()
     {
         printf("Error Opening File\n");
     }
-    scanf("%s",&val);
+   // scanf("%s",&val);
     while (fp1!=EOF)
     {
-        if(val);
+       //code goes here 
     }
 
     //FILE *fp2=fopen();
