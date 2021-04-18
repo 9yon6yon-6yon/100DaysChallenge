@@ -1,5 +1,3 @@
-
-
 class Car {
     public String carName;
     public String carModel;
