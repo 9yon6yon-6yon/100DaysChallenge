@@ -15,7 +15,7 @@ int main()
     int r[1000], s, t, N, f = 0, i;
     char ch;
     int search;
-    int found = 0;
+   
 
     while (1)
     {
