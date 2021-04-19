@@ -8,6 +8,7 @@ int main()
     printf("\t\t===== Enter r, to take salary of all Employee Array of size N.====\n");
 
     printf("\t\t===== Enter s, to find and display Salary Ammount.====\n");
+    printf("\t\t===== Enter y, to find and display the height Salary Ammount.====\n");
 
     printf("\t\t===== Enter t, to display Salary  of all the Employee.====\n");
 
@@ -15,7 +16,6 @@ int main()
     int r[1000], s, t, N, f = 0, i;
     char ch;
     int search;
-   
 
     while (1)
     {
@@ -62,18 +62,33 @@ int main()
                         printf("\n\t Salary : %d\n\tFound at index: %d ", search, i + 1);
                         break;
                     }
-                    else
-                        printf("No Salary found\n");
-                    break;
                 }
             }
+            break;
         }
-        break;
 
+        case 'y':
+        {
+            if (f == 0)
+                printf("\n =========== No Salary found ===========\n");
+            else
+            {
+                int max = r[0];
+                for (i = 0; i < N; i++)
+                {
+                    if (max < r[i])
+                    {
+                        max = r[i];
+                    }
+                }
+                printf("Height Salary among all is : %d \n", max);
+            }
+            break;
+        }
         case 't':
         {
             if (f == 0)
-                printf("No Salary found");
+                printf("\n =========== No Salary found ===========\n");
             else
             {
                 printf("\n Salary of all Employee");
