@@ -12,7 +12,7 @@ public class ArrayCopy {
 
     }
 
-    public void arayCopy() {
+    public void arrayCopy() {
         int[] x = { 1, 2, 3, 4, 5, 6 };
         int[] y = { 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
         System.arraycopy(x, 0, y, 0, x.length);
