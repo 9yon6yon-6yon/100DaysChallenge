@@ -23,6 +23,6 @@ class Main {
         DoPrint(y);
         DoPrint(z);
 
-    }
+    }//no error
 
 }

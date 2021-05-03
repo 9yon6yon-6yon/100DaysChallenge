@@ -1,5 +1,5 @@
 class Base2 {
-    final public void show() {
+    public void show() {//removing final modifier
         System.out.println("Base ::show() called");
 
     }

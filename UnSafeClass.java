@@ -14,9 +14,7 @@ public class UnSafeClass {
 
         } catch (Exception e) {
             e.printStackTrace();
-        } catch (RuntimeException e) {// Unreachable catch block for RuntimeException. It is already handled by the catch block for Exception
-            e.printStackTrace();
-        }
+        }//removed catch
     }
 
 }

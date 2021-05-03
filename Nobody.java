@@ -12,7 +12,8 @@ public class Nobody {
 
             }
         };
-        person.printName("nobody");//The method printName() in the type Somebody is not applicable for the arguments (String)
+        person.printName();//The method printName() in the type Somebody is not applicable for the arguments (String)
+        //removed argument from printName()
     }
 
 }
