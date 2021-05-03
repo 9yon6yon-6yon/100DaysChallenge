@@ -5,7 +5,7 @@ interface calculate {
 class display implements calculate {
     int x;
 
-    void cal(int item) {
+    void cal(int item) {//Cannot reduce the visibility of the inherited method from calculate
         x = item * item;
     }
 }
