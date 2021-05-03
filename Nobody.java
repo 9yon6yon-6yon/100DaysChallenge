@@ -12,7 +12,7 @@ public class Nobody {
 
             }
         };
-        person.printName("nobody");
+        person.printName("nobody");//The method printName() in the type Somebody is not applicable for the arguments (String)
     }
 
 }

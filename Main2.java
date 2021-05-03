@@ -6,7 +6,7 @@ class Base2 {
 }
 
 class Derived2 extends Base2 {
-    public void show() {
+    public void show() {//Cannot override the final method from Base2
         System.out.println("Derived :: show() called");
     }
 }

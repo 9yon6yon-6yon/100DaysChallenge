@@ -7,7 +7,7 @@ public class SafeClass {
     }
 
     public static void main(String[] args) {
-        System.out.println(sqrt(3));
+        System.out.println(sqrt(3));//Unhandled exception type Exception
 
     }
 
