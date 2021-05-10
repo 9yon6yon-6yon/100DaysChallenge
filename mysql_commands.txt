@@ -1,0 +1,50 @@
+  __  __       ____   ___  _
+ |  \/  |_   _/ ___| / _ \| |
+ | |\/| | | | \___ \| | | | |
+ | |  | | |_| |___) | |_| | |___
+ |_|  |_|\__, |____/ \__\_\_____|
+         |___/                                                           
+=====================================================================================|==========================================================
+    Description                                                                      | Command
+=====================================================================================|==========================================================
+To login(from unix shell) use -h only if needed.                                     | mysql -h hostname -u root -p
+Create a database on the sql server                                                  | CREATE DATABASE database_name;
+List all databases on the sql server.                                                | SHOW DATABASES;
+Switch to a database.                                                                | USE database_name;
+To see all the tables in the db(database)                                            | SHOW TABLES;
+To see database's field formats.                                                     | DESCRIBE table_name;
+To delete a db.                                                                      | DROP DATABASE db_name;
+To delete a table.                                                                   | DROP TABLE table_name;
+Show all data in a table.                                                            | SELECT*FROM table_name;
+Returns the columns and column information pertaining to the designated table.       | SHPOW COLUMNS FROM table_name;
+Show certain selected rows with the value "whatever"                                 | SELECT*FROM table_name WHERE field_name = "whatever";
+Show all records containing the name "bob" and the phone number '34444'              | SELECT*FROM table_name WHERE name="bob" AND phone_number='34444';
+
+Show all records not containing the name "bob" and the  phone number '34444'order by | SELECT*FROM table_name WHERE name!="bob" AND phone_number='34444' order by
+the phone_number field                                                               | the phone_number;                                                      
+Show all records starting with the letters'bob' and the phone number'34444'          | SELECT*FROM table_name WHERE name like "bob%" AND phone_number ='34444';
+Use a regular expression to fing records.Use "REGEXP BINARY" to force case-          | SELECT*FROM table_name WHERE rec RLIKE "^a$";
+sensitivity.This find record beginning with a.                                       |
+Show unique records.                                                                 | SELECT DISTINCT column_name FROM table_name;
+Show selected records sorted in an ascending(asc)or descending(desc).                | SELECT col1,col2 FROM table_name ORDER BY col2 DESC;
+Count rows.                                                                          | SELECT COUNT(*) FROM table_name;  
+                                               |
+                                               |
+                                               |
+                                               |
+                                               |
+                                               |
+                                               |
+                                               |
+                                               |
+                                               |
+                                               |
+                                               |
+                                               |
+                                               |
+                                               |
+                                               |
+                                               
+                                               
+                                             
+                                               
