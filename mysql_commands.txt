@@ -28,12 +28,14 @@ sensitivity.This find record beginning with a.                                  
 Show unique records.                                                                 | SELECT DISTINCT column_name FROM table_name;
 Show selected records sorted in an ascending(asc)or descending(desc).                | SELECT col1,col2 FROM table_name ORDER BY col2 DESC;
 Count rows.                                                                          | SELECT COUNT(*) FROM table_name;  
-                                               |
-                                               |
-                                               |
-                                               |
-                                               |
-                                               |
+Switch to the mysql db. Create a new user                                            | INSERT INTO table_name (Host,user,password) VALUES                
+                                                                                     | ('%s','user',PASSWORD('password');
+Change a users password.                                                             | mysqladmin -u root -h hostname.blah.org -p password 'new-password';
+Change a users password.(from MySQL prompt).                                         | SET PASSWORD FOR 'user'@'hostname' = PASSWORD('passwordhere');
+To update info already in a table.                                                   | UPDATE table_name SET Select_priv ='Y',Insert_priv='Y',Update_priv='Y'where    
+                                                                                     | [field name] ='user';
+Delete a row(s) from table.                                                          | DELETE from table_name where field_name ='whatever';
+Update database permissions/privilages.                                              | FLUSH PRIVILEGES;
                                                |
                                                |
                                                |
