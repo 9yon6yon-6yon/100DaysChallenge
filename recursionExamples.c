@@ -7,9 +7,9 @@ int sum(int n)
         //return n + n + sum(n - 1);
         //return n + sum(n - 1);
         //return n - 2 * n + sum(n - 1);
-        // return 2 * n - 2 + sum(n -1);
+       // return 2 * n - 2 + sum(n +1);
         //return n-2+sum(n+1);
-        //return n + global + sum(n +1);
+       // return n + global + sum(n +1);
         return 2 * n + global + sum(n + 1);
     //return n+sum(n-1);
 
