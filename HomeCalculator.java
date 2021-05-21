@@ -13,7 +13,8 @@ public class HomeCalculator implements WindowListener, ActionListener {
     public Button b[] = new Button[10];
     int i;
     public TextField tf;
-    public Button br1, br2, dot, plus, minus, equal, div, multi, clr;
+    public Button br1, br2, dot, percent, plus, minus, equal, div, multi, clr;
+
     public HomeCalculator() {
         f = new Frame("Calculator");
         tf = new TextField(12);
@@ -27,6 +28,7 @@ public class HomeCalculator implements WindowListener, ActionListener {
         mi3.setActionCommand("exit");
 
     }
+
     public void launchFrame() {
         m1.add(mi1);
         mi1.addActionListener(this);
@@ -65,6 +67,8 @@ public class HomeCalculator implements WindowListener, ActionListener {
         br1.setActionCommand("braketopening");
         br2 = new Button(")");
         br2.setActionCommand("bracketclosing");
+        percent = new Button("%");
+        percent.setActionCommand("parcentage");
         dot.addActionListener(this);
         clr.addActionListener(this);
         multi.addActionListener(this);
@@ -77,6 +81,7 @@ public class HomeCalculator implements WindowListener, ActionListener {
         p.add(br1);
         p.add(br2);
         p.add(clr);
+        p.add(percent);
         p.add(b[7]);
         p.add(b[8]);
         p.add(b[9]);
@@ -241,6 +246,7 @@ public class HomeCalculator implements WindowListener, ActionListener {
         }
 
     }
+
     public static void main(String[] args) {
         HomeCalculator hc = new HomeCalculator();
         hc.launchFrame();
