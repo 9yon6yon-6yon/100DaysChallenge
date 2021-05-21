@@ -1,9 +1,9 @@
 import java.awt.*;
 import java.awt.event.*;
 
-public class HomeCalculator implements WindowListener, ActionListener {
+public class HomeCalculator extends Frame implements WindowListener, ActionListener {
 
-    private Frame f;
+    Panel p = new Panel();
 
     public Button b[] = new Button[10];
 
@@ -12,15 +12,17 @@ public class HomeCalculator implements WindowListener, ActionListener {
     public Button cut, br1, br2, dot, plus, minus, equal, div, multi, clr;
 
     public HomeCalculator() {
-        f = new Frame("Basic Calculator");
+        super("Basic Calculator");
+
         tf = new TextField(30);
 
     }
 
     public void launchFrame() {
 
-        //f.add(tf, BorderLayout.NORTH);
-        f.setLayout(new GridLayout(5, 3));
+        add(tf, BorderLayout.NORTH);
+        add(p, BorderLayout.CENTER);
+        p.setLayout(new GridLayout(5, 3));
 
         for (i = 0; i <= 9; i++) {
             b[i] = new Button(i + "");
@@ -30,6 +32,7 @@ public class HomeCalculator implements WindowListener, ActionListener {
         }
         dot = new Button(".");
         clr = new Button("C");
+        clr.setActionCommand("clear");
         multi = new Button("*");
         plus = new Button("+");
         minus = new Button("-");
@@ -38,6 +41,7 @@ public class HomeCalculator implements WindowListener, ActionListener {
         br1 = new Button("(");
         br2 = new Button(")");
         cut = new Button("<-");
+        cut.setActionCommand("remove");
         dot.addActionListener(this);
         clr.addActionListener(this);
         multi.addActionListener(this);
@@ -49,36 +53,35 @@ public class HomeCalculator implements WindowListener, ActionListener {
         br2.addActionListener(this);
         cut.addActionListener(this);
 
-        f.add(br1);
-        f.add(br2);
-        f.add(cut);
-        f.add(clr);
+        p.add(br1);
+        p.add(br2);
+        p.add(cut);
+        p.add(clr);
 
-        f.add(b[7]);
-        f.add(b[8]);
-        f.add(b[9]);
-        f.add(div);
+        p.add(b[7]);
+        p.add(b[8]);
+        p.add(b[9]);
+        p.add(div);
 
-        f.add(b[4]);
-        f.add(b[5]);
-        f.add(b[6]);
-        f.add(multi);
+        p.add(b[4]);
+        p.add(b[5]);
+        p.add(b[6]);
+        p.add(multi);
 
-        f.add(b[1]);
-        f.add(b[2]);
-        f.add(b[3]);
-        f.add(minus);
+        p.add(b[1]);
+        p.add(b[2]);
+        p.add(b[3]);
+        p.add(minus);
 
-        f.add(b[0]);
-        f.add(dot);
-        f.add(plus);
-        f.add(equal);
+        p.add(b[0]);
+        p.add(dot);
+        p.add(plus);
+        p.add(equal);
 
-        f.addWindowListener(this);
-        f.setSize(250, 200);
-        f.setBackground(Color.lightGray);
+        addWindowListener(this);
+        setSize(250, 250);
 
-        f.setVisible(true);
+        setVisible(true);
     }
 
     public void windowClosing(WindowEvent e) {
@@ -104,7 +107,11 @@ public class HomeCalculator implements WindowListener, ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-
+        String str;
+        if (e.getActionCommand() == "clear") {
+            str=" ";
+            tf.setText(str);
+        }
     }
 
     public static void main(String[] args) {
