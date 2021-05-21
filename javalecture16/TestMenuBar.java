@@ -53,10 +53,10 @@ public class TestMenuBar implements WindowListener, ActionListener {
     public void windowOpened(WindowEvent e) {
     }
 
-    public void windowInconfined(WindowEvent e) {
+    public void windowIconified(WindowEvent e) {
     }
 
-    public void windowDeiconfined(WindowEvent e) {
+    public void windowDeiconified(WindowEvent e) {
     }
 
     public void windowClosed(WindowEvent e) {
@@ -74,15 +74,4 @@ public class TestMenuBar implements WindowListener, ActionListener {
 
     }
 
-    @Override
-    public void windowDeiconified(WindowEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void windowIconified(WindowEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
 }

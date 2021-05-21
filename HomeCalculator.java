@@ -1,9 +1,15 @@
 import java.awt.*;
 import java.awt.event.*;
 
-public class HomeCalculator extends Frame implements WindowListener, ActionListener {
+import javax.swing.plaf.MenuItemUI;
+
+public class HomeCalculator implements WindowListener, ActionListener {
 
     Panel p = new Panel();
+    private Frame f;
+    private MenuBar mb;
+    private Menu m1;
+    private MenuItem mi1, mi2, mi3;
 
     public Button b[] = new Button[10];
 
@@ -12,17 +18,41 @@ public class HomeCalculator extends Frame implements WindowListener, ActionListe
     public Button cut, br1, br2, dot, plus, minus, equal, div, multi, clr;
 
     public HomeCalculator() {
-        super("Basic Calculator");
+        f = new Frame("Calculator");
 
-        tf = new TextField(30);
+        tf = new TextField(12);
+        mb = new MenuBar();
+        m1 = new Menu("☰");
+
+        mi1 = new MenuItem("Dark");
+        mi1.setActionCommand("black_theme");
+
+        mi2 = new MenuItem("Light");
+        mi2.setActionCommand("light_theme");
+        mi3 = new MenuItem("Exit");
+        mi3.setActionCommand("exit");
 
     }
 
     public void launchFrame() {
 
-        add(tf, BorderLayout.NORTH);
-        add(p, BorderLayout.CENTER);
+        m1.add(mi1);
+        mi1.addActionListener(this);
+        m1.add(mi2);
+        mi2.addActionListener(this);
+
+        m1.addSeparator();
+        m1.add(mi3);
+        mi3.addActionListener(this);
+
+        mb.add(m1);
+        f.setMenuBar(mb);
+
         p.setLayout(new GridLayout(5, 3));
+        f.add(tf, BorderLayout.NORTH);
+
+        f.add(p, BorderLayout.CENTER);
+        f.setLayout(new FlowLayout());
 
         for (i = 0; i <= 9; i++) {
             b[i] = new Button(i + "");
@@ -40,7 +70,7 @@ public class HomeCalculator extends Frame implements WindowListener, ActionListe
         div = new Button("/");
         br1 = new Button("(");
         br2 = new Button(")");
-        cut = new Button("<-");
+        cut = new Button("<");
         cut.setActionCommand("remove");
         dot.addActionListener(this);
         clr.addActionListener(this);
@@ -78,10 +108,12 @@ public class HomeCalculator extends Frame implements WindowListener, ActionListe
         p.add(plus);
         p.add(equal);
 
-        addWindowListener(this);
-        setSize(250, 250);
+        f.add(p);// adding panel to the frame
+        f.addWindowListener(this);
 
-        setVisible(true);
+        f.setSize(200, 230);
+
+        f.setVisible(true);
     }
 
     public void windowClosing(WindowEvent e) {
@@ -109,9 +141,24 @@ public class HomeCalculator extends Frame implements WindowListener, ActionListe
     public void actionPerformed(ActionEvent e) {
         String str;
         if (e.getActionCommand() == "clear") {
-            str=" ";
+            str = " ";
             tf.setText(str);
         }
+        if (e.getActionCommand() == "black_theme") {
+            tf.setForeground(Color.white);
+            tf.setBackground(Color.black);
+            f.setBackground(Color.black);
+            f.setForeground(Color.white);
+
+        }
+        if (e.getActionCommand() == "light_theme") {
+            tf.setForeground(Color.black);
+            tf.setBackground(Color.white);
+            f.setBackground(Color.white);
+            f.setForeground(Color.black);
+        }
+        if (e.getActionCommand() == "exit")
+            System.exit(0);
     }
 
     public static void main(String[] args) {
