@@ -40,7 +40,7 @@ public class HomeCalculator implements WindowListener, ActionListener {
         mb.add(m1);
         f.setMenuBar(mb);
         p.setLayout(new GridLayout(5, 3));
-        f.add(tf, BorderLayout.NORTH);
+        f.add(tf, BorderLayout.SOUTH);
         f.add(p, BorderLayout.CENTER);
         f.setLayout(new FlowLayout());
 
@@ -74,6 +74,7 @@ public class HomeCalculator implements WindowListener, ActionListener {
         multi.addActionListener(this);
         plus.addActionListener(this);
         minus.addActionListener(this);
+        percent.addActionListener(this);
         equal.addActionListener(this);
         div.addActionListener(this);
         br1.addActionListener(this);
@@ -131,10 +132,6 @@ public class HomeCalculator implements WindowListener, ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
-        if (e.getActionCommand() == "clear") {
-            str = " ";
-            tf.setText(str);
-        }
         if (e.getActionCommand() == "black_theme") {
             tf.setForeground(Color.white);
             tf.setBackground(Color.black);
@@ -152,37 +149,44 @@ public class HomeCalculator implements WindowListener, ActionListener {
             System.exit(0);
         }
         if (e.getActionCommand() == "dot") {
-            s3 = tf.getText();
-            tf.setText(s3 + ".");
+            s1 = tf.getText();
+            s2 = ".";
+            str = s1 + s2;
+            tf.setText(str);
         }
         if (e.getActionCommand() == "add") {
             s3 = tf.getText();
-            tf.setText(s3 + "+");
+            tf.setText("");
             c = 1;
         }
         if (e.getActionCommand() == "minus") {
             s3 = tf.getText();
-            tf.setText(s3 + "-");
+            tf.setText("");
             c = 2;
         }
         if (e.getActionCommand() == "multiple") {
             s3 = tf.getText();
-            tf.setText(s3 + "*");
+            tf.setText("");
             c = 3;
         }
         if (e.getActionCommand() == "division") {
             s3 = tf.getText();
-            tf.setText(s3 + "/");
+            tf.setText("");
             c = 4;
+        }
+        if (e.getActionCommand() == "parcentage") {
+            s3 = tf.getText();
+            tf.setText("");
+            c = 5;
         }
         if (e.getActionCommand() == "braketopening") {
 
             s3 = tf.getText();
-            tf.setText(s3 + "(");
+            tf.setText("");
         }
         if (e.getActionCommand() == "bracketclosing") {
             s3 = tf.getText();
-            tf.setText(s3 + ")");
+            tf.setText("");
         }
         if (e.getSource() == b[0]) {
             s1 = tf.getText();
@@ -243,6 +247,40 @@ public class HomeCalculator implements WindowListener, ActionListener {
             s2 = "9";
             str = s1 + s2;
             tf.setText(str);
+        }
+        if (e.getActionCommand() == "eq") {
+            s4 = tf.getText();
+            if (c == 1) {
+                n = Integer.parseInt(s3) + Integer.parseInt(s4);
+                tf.setText(s3 + "+" + s4 + "=" + String.valueOf(n));
+            } else if (c == 2) {
+                n = Integer.parseInt(s3) - Integer.parseInt(s4);
+                tf.setText(s3 + "-" + s4 + "=" + String.valueOf(n));
+            } else if (c == 3) {
+                n = Integer.parseInt(s3) * Integer.parseInt(s4);
+                tf.setText(s3 + "*" + s4 + "=" + String.valueOf(n));
+            }
+            if (c == 4) {
+                try {
+                    int p = Integer.parseInt(s4);
+                    if (p != 0) {
+                        n = Integer.parseInt(s3) / Integer.parseInt(s4);
+                        tf.setText(s3 + "/" + s4 + "=" + String.valueOf(n));
+                    } else
+                        tf.setText("Infinite");
+
+                } catch (Exception i) {
+                }
+            }
+            if (c == 5) {
+                n = Integer.parseInt(s3) % Integer.parseInt(s4);
+                tf.setText(s3 + "%" + s4 + "=" + String.valueOf(n));
+            }
+
+        }
+        if (e.getActionCommand() == "clear") {
+
+            tf.setText("");
         }
 
     }
