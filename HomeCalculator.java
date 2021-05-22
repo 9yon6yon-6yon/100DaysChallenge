@@ -44,7 +44,7 @@ public class HomeCalculator implements WindowListener, ActionListener {
         f.add(p, BorderLayout.CENTER);
         f.setLayout(new FlowLayout());
 
-        for (i = 0; i <= 9; i++) {
+        for (i = 0; i <= 9; i++) {//creating buttons using for loop
             b[i] = new Button(i + "");
             b[i].addActionListener(this);
 
@@ -79,6 +79,7 @@ public class HomeCalculator implements WindowListener, ActionListener {
         div.addActionListener(this);
         br1.addActionListener(this);
         br2.addActionListener(this);
+        //adding butons to the panel
         p.add(br1);
         p.add(br2);
         p.add(clr);
@@ -129,6 +130,7 @@ public class HomeCalculator implements WindowListener, ActionListener {
 
     public void windowDeactivated(WindowEvent e) {
     }
+    //conditions
 
     public void actionPerformed(ActionEvent e) {
 
@@ -248,7 +250,7 @@ public class HomeCalculator implements WindowListener, ActionListener {
             str = s1 + s2;
             tf.setText(str);
         }
-        if (e.getActionCommand() == "eq") {
+        if (e.getActionCommand() == "eq") {//conditions for = sign
             s4 = tf.getText();
             if (c == 1) {
                 n = Integer.parseInt(s3) + Integer.parseInt(s4);
@@ -287,7 +289,7 @@ public class HomeCalculator implements WindowListener, ActionListener {
 
     public static void main(String[] args) {
         HomeCalculator hc = new HomeCalculator();
-        hc.launchFrame();
+        hc.launchFrame();//calling launchFrame method
 
     }
 }
