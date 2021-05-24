@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+//chayon
 struct student
 {
     char name[20];
@@ -12,12 +12,12 @@ struct student
 void print(struct student st[], int n)
 {
     int i, j, k;
-    FILE *otp = fopen("output.txt", "a");
+    FILE *otp = fopen("output.txt", "a");//chayon
     for (i = 0; i < n; i++)
     {
         fprintf(otp, "-------------------------------------------\n");
         fprintf(otp, "Student %d : \nName : %s \nID: %s\n", i + 1, st[i].name, st[i].id);
-
+        //Chayon
         for (j = 0; j < 3; j++)
         {
             fprintf(otp, "Subject %d marks: ", j + 1);
@@ -81,7 +81,7 @@ int main()
     FILE *otp = fopen("output.txt", "w");
     if (inp == NULL)
     {
-        printf("404 not found\n");
+        printf("404 not found\n"); //chayon
     }
     int n;
     fscanf(inp, "%d", &n);
