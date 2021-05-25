@@ -70,8 +70,8 @@ int maxCGPA(struct student st[], int n)
         }
     }
     fprintf(otp, "-------------------------------------------\n");
-    fprintf(otp, "Maximum score = %.2f\n", max);
-    fprintf(otp, "Minimum score = %.2f\n", min);
+    fprintf(otp, "Maximum CGPA = %.2f\n", max);
+    fprintf(otp, "Minimum CGPA = %.2f\n", min);
     fprintf(otp, "-------------------------------------------\n");
     fclose(otp);
 }
