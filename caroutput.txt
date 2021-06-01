@@ -1,0 +1,21 @@
+
+ID : 1 
+ Name : toyota 
+ Model : 2016 
+ID : 2 
+ Name : bazaz 
+ Model : 2022 
+ID : 3 
+ Name : Nisshan 
+ Model : 2048 
+ID : 4 
+ Name : Tesla 
+ Model : 2013 
+ID : 5 
+ Name : Hundai 
+ Model : 2011 
+========================
+Latest Model :
+ ID : 3 
+ Name : Nisshan 
+ Model : 2048

@@ -4,14 +4,10 @@ int main()
 
 {
     printf("\t\t========== Office Pay Roll System ==============\n\n");
-
     printf("\t\t===== Enter r, to take salary of all Employee Array of size N.====\n");
-
     printf("\t\t===== Enter s, to find and display Salary Ammount.====\n");
     printf("\t\t===== Enter y, to find and display the height Salary Ammount.====\n");
-
     printf("\t\t===== Enter t, to display Salary  of all the Employee.====\n");
-
     printf("Press q to quit\n");
     int r[1000], s, t, N, f = 0, i;
     char ch;
