@@ -35,8 +35,9 @@ void searchAnEmployee(struct Employee info[], int n, char phno[])
 
         for (i = 0; i < n; i++)
         {
+            if (strcmp(info[i].phoneNo, phno) == 0)
 
-            if (atoi(info[i].phoneNo) == atoi(phno)) //atoi to convert string into int
+            // if (atoi(info[i].phoneNo) == atoi(phno)) //atoi to convert string into int
             {
                 printf("\n Name : %s\n Phone NO :%s\n Salary : %.2f\n", info[i].name, info[i].phoneNo, info[i].salary);
                 break;
