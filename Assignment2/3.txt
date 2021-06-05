@@ -1,0 +1,28 @@
+Question: Describe a scenario, where using anonymous classes might not be helpful is rather
+         problematic.
+Answer:
+It is an inner class without a name and for which only a single object is created. An anonymous inner class can be useful when making an instance of an object with certain “extras” such as 
+overloading methods of a class or interface, without having to actually subclass a class. The referance of the enclosing class may scape through the inner class.
+So the answer is-it is a very bad Practice to use an inner class if it published itself. Since that would be automatically publish the enclosing class for example :-
+  
+  changeManager register(new ChangeListener(){
+    public void change(...){
+     .............   
+   .. }});
+An argument defined anonymous inner class has syntax that ends like this:
+    });
+But normal anonymous inner classes will end like this:
+    };
+Here, the anonymous ChangeListener is passed to the register method of a changeManager.Because an anonymous class definition is an expression, it must be part of a statement.
+Doing this it will automatically publish the enclosing class. It is not possible to have anonymous and 'non-local' class.
+An anonymous class cannot access local variables in its enclosing scope that are not declared as final or effectively final.Like a nested class, a declaration of a type (such as a variable) in an anonymous class shadows any other declarations in the enclosing scope that have the same name. 
+You cannot declare static initializers or member interfaces in an anonymous class.An anonymous class can have static members provided that they are constant variables.
+Note that you can declare the following in anonymous classes:
+  *Fields
+  *Extra methods (even if they do not implement any methods of the supertype)
+  *Instance initializers
+  *Local classes
+However, it is not possible declare constructors in an anonymous class.
+In such scenarios,using the anonymous inner class can be considered as a bad practice and using it might not be helpful is rather problematic.
+
+
