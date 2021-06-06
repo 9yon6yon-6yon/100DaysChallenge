@@ -12,9 +12,9 @@ int main()
     int a = 32, b = 27;
     int *p = &a;
     int *q;
-    *p = *p + b;
+    *p = *p + a;
     q = &b;
-    *q = *p + a;
+    *q = *q + b;
     f(&a);
     f(&b);
 
@@ -23,6 +23,6 @@ int main()
     else
         *p = *p - a;
     printf("%d\n", a);
-    printf("%d\n", a);
+    printf("%d\n", b);
     return 0;
 }
