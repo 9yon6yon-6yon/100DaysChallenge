@@ -148,7 +148,7 @@ After the menu is displayed, the program will prompt the user “Enter your choi
 
 
 #include <stdio.h>
-float Highest = 0.0;
+float Highest = 0;
 struct Employee
 {
     char name[20], phoneNo[12];
