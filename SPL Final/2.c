@@ -2,8 +2,9 @@
 #include <string.h>
 int main()
 {
-    int a = 3002 % 8;//id 
-    char str1[50] = "011203002";
+    int a = 3036 % 8;//id 
+    printf("%d",a);
+    char str1[50] = "011203036";
     char arr[4][20] = {"is truthful",
                        "is honest",
                        "is friendly",

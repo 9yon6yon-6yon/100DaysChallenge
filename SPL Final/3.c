@@ -1,7 +1,8 @@
 #include <stdio.h>
 int main()
 {
-    int sum = 0, a = 2013 % 7, num[4];
+    int sum = 0, a = 3036 % 7, num[4];
+   // printf("%d\n",a);
     FILE *fp = fopen("finalinput.txt", "w"); //creating a file name input.txt in write mode
     fprintf(fp, "% s\n", "Good Morning");    //print Good Morning and a new line in input.txt
     for (int i = 0; i < 5; i++)
