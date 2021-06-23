@@ -7,25 +7,22 @@ import java.util.ArrayList;
 
 public class Server {
 
-    private static ArrayList<ClientThread> clients;
-
     public static void main(String[] args) throws IOException {
-        int port = 8080;
+        int port = 4444;
 
         while (true) {
-            while (true) {
-                try {
-                    ServerSocket ss = new ServerSocket(port);
-                    clients = new ArrayList<ClientThread>();
-                    Socket s = ss.accept();
-                    ClientThread client = new ClientThread(s);
-                    Thread thread = new Thread(client);
-                    thread.start();
-                    clients.add(client);
-                } catch (IOException e) {
-                    System.out.println("Accept failed on :" + port);
-                }
+            try {
+                ServerSocket ss = new ServerSocket(port);
+                ArrayList<ClientThread> clients = new ArrayList<ClientThread>();
+                Socket s = ss.accept();
+                ClientThread client = new ClientThread(s);
+                Thread thread = new Thread(client);
+                thread.start();
+                clients.add(client);
+            } catch (IOException e) {
+                System.out.println("Accept failed on :" + port);
             }
+
         }
     }
 

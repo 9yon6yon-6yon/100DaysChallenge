@@ -11,7 +11,7 @@ public class Client {
         Scanner scan = new Scanner(System.in);
         String name = scan.nextLine();
         scan.close();
-        int port = 8080;
+        int port = 4444;
         try {
             s = new Socket("10.0.0.106", port);
             Thread.sleep(1000);
