@@ -7,7 +7,7 @@ import wikipedia
 listener = sr.Recognizer()
 hey = pyttsx3.init()
 voice = hey.getProperty("voices")
-hey.setProperty("voice", voices[1].id)
+hey.setProperty("voice", voice[1].id)
 
 
 def talk(text):
