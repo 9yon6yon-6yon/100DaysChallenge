@@ -6,7 +6,7 @@ import wikipedia
 
 listener = sr.Recognizer()
 hey = pyttsx3.init()
-voice = hey.getProperty("voices")
+voice = hey.getProperty("voice")
 hey.setProperty("voice", voice[1].id)
 
 
