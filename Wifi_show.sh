@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Edited By 9yon6yon-6yon
 loading() {
 clear
 printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;93m Run as super user, e.g.\e[0m\e[1;96m sudo bash filename.sh \e[1;93m or\e[0m \e[0m\e[1;96m./filename.sh\n"
