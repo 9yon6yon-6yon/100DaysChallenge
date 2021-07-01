@@ -78,8 +78,8 @@ read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Enter BSSID       
 read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Enter Channel             : \e[0m\e[1;96m\en' ch
 read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Enter Handshake File Name : \e[0m\e[1;96m\en' f_name
 sleep 3
-gnome-terminal -e "airodump-ng -c $ch --bssid $bssid -w $f_name $mode" --geometry=80*40+100-200
-gnome-terminal -e "aireplay-ng -0 50 -a $bssid $mode" --geometry=80*40+100+200
+gnome-terminal -e "airodump-ng -c $ch --bssid $bssid -w $f_name $mode" --geometry=80*40+100+200
+gnome-terminal -e "aireplay-ng -0 50 -a $bssid $mode" --geometry=80*40+100-200
 sleep 2 
 stop(){
 #stoping monitor mode
