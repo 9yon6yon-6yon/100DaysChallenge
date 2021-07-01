@@ -5,7 +5,7 @@ clear
 printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;93m Run as super user, e.g.\e[0m\e[1;96m sudo bash filename.sh \e[1;93m or\e[0m \e[0m\e[1;96m./filename.sh\n"
 sleep 2
 clear
-printf "\e[1;31m"
+printf "\e[1;94m"
 printf "\n▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒ Loading ...\n"
 sleep 0.1
 clear
@@ -83,6 +83,7 @@ gnome-terminal --geometry=80x22+0+500 -e "aireplay-ng -0 50 -a $bssid $mode"
 sleep 2 
 stop(){
 #stoping monitor mode
+printf "\e[1;96m"
 clear
 sleep 0.1
 printf "\nStoping monitor mode .\n"
