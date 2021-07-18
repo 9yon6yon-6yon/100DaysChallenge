@@ -1,3 +1,4 @@
+package OOPLab.OOPLabA.LabCLassTest;
 import java.util.Scanner;
 
 public class exam {
