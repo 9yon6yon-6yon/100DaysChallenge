@@ -1,3 +1,4 @@
+package OOPLab.OOPLabA.OOPLAB_3;
 import java.util.Scanner;
 
 public class ArrayTest {

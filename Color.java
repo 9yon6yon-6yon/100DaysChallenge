@@ -1,6 +1,6 @@
 public class Color {
     int red;
-    boolean blue;
+    static boolean blue;
     String green;
 
     void Color() {

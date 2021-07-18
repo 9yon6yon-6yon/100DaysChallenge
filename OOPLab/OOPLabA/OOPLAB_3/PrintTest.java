@@ -1,3 +1,4 @@
+package OOPLab.OOPLabA.OOPLAB_3;
 public class PrintTest {
     public static void main(String[] args) {
         int a1 = 20;
