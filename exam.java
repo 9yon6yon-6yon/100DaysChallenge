@@ -24,10 +24,14 @@ public class exam {
             array[i] = s.nextDouble();
 
         }
-        for (int i = 0; i < array.length; i += 2) {
-            System.out.println("Value at index " + i + " is : " + array[i]);
+        for (int i = 4; i < array.length; i++) {
+           System.out.println(array[i]);
+
         }
-        double start = array[0];
+        // for (int i = 0; i < array.length; i += 2) {
+        //     System.out.println("Value at index " + i + " is : " + array[i]);
+        // }
+        double ending = array[array.length-1];
         double max = array[0];
         for (int i = 0; i < array.length; i++) {
             if (max < array[i]) {
@@ -35,8 +39,9 @@ public class exam {
             }
 
         }
-        sum = start + max;
-        System.out.println("Sum of first element + max value is: " + sum);
+        sum = ending + max;
+        System.out.println("Sum of last element + largest element is: " + sum);
+        System.out.println(array[array.length / 2]);
 
     }
 }
