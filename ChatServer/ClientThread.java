@@ -8,6 +8,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class ClientThread extends Server implements Runnable {
+    private static final ClientThread[] clients = null;
     private Socket s;
     private BufferedReader in;
     private PrintWriter out;
