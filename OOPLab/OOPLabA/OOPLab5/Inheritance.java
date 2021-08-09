@@ -1,4 +1,4 @@
-package OOPLab.OOPLab5;
+package OOPLab.OOPLabA.OOPLab5;
 
 // class ClassA {
 //     private int var1;
