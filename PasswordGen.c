@@ -6,7 +6,7 @@ int main()
 {
     char val;
 
-    FILE *fp1 = fopen("/media/thebird/user/rockyou.txt", "r");
+    FILE *fp1 = fopen("rockyou.txt", "r");
     if (fp1 == NULL)
     {
         printf("Error Opening File\n");
