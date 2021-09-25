@@ -1,0 +1,10 @@
+Araceli 6 0.81
+Schroeder 3 3.32
+Clinton 1 0.12
+Simmons 4 3.3
+Tessa 73 6.28
+King 61 0.06
+Lance 7 1.6
+Huerta 734 0.48
+Matthias 5 2.39
+Osborn 9 5.36

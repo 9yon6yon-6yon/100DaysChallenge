@@ -1,0 +1,31 @@
+2. Translate the requirements given below, into correct executable
+Java code.
+• Create a package. The package name will be your own first
+name. Under this package, create an interface, named B,
+which will contain only one integer variable, initialized
+with the last three digits of your own student id.
+• Create another package. The package name will be your
+own last name. Under this package create an interface,
+named A. This interface will inherit from interface B. It will
+contain a method header, “public void
+showInformation()”. The implementation of this method
+requires printing the last three digits of your own student
+id using variable from interface B & your own full name.
+• Under the default package, create a class named Tester.
+This class will implement interface A. Provide appropriate
+method body for the method named “showInformation”,
+according to the requirements stated above. Create a main
+method, which will create an object of class Tester and
+invoke the “showInformation” method.
+
+
+
+3. Consider you have to build an application where -
+• In the main method, you take an integer input
+• If the input is even number then calculate the divisors of
+that number in a new thread and display “This is divisor
+thread”. Also, display the divisors of that number.
+• If the input number is odd, another thread will calculate
+the factorial of that number and display “This is factorial
+thread”. Also, display the factorial of that number.
+Now write a java program that will satisfy the above conditions.
