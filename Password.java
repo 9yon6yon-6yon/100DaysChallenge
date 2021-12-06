@@ -11,7 +11,7 @@ public class Password extends JFrame {
     private JButton b1, b2;
 
     public Password() {
-        super("PAssword Example");
+        super("Password Example");
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
         l1 = new JLabel("Enter User Name  ");

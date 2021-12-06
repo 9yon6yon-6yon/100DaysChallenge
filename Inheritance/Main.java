@@ -5,7 +5,7 @@ public class Main {
 
        Rat r = new Rat();
        r.show();
-       r.show2();
+     //  r.show2();
        System.out.println(r.x+" "+r.y+" "+r.z);
 
     }
